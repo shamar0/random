@@ -1,0 +1,102 @@
+body{
+    font-family: "Plus Jakarta Sans" !important;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container{
+    flex: 1;
+}
+
+/* navbar */
+.navbar{
+    height: 5rem;
+    background-color: white;
+}
+
+.fa-compass{
+    color: #fe424d;
+    font-size: 2rem;
+}
+.nav-link {
+    color: #222 !important;
+}
+
+/* footer */
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.f-Info-social{
+     display: flex;
+}
+.fa-brands{
+   font-size: 2rem;
+   margin-left: 1.2rem;
+}
+.f-Info-agree{
+    color: #222;
+}
+.f-Info-agree a{
+    text-decoration: none ;
+    color: #222;
+}
+.f-Info-agree a:hover{
+    text-decoration: underline;
+}
+
+/* cards */
+.listing-card{
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+   
+}
+.card-body{
+    padding: 0 !important;
+}
+.card img{
+    height: 18rem;
+    border-radius: 0.7rem;
+}
+.card-row{
+     margin-top: 1rem !important;
+    /* padding: 5rem 0.5rem 0.5rem 1rem ; */
+}
+.card-ind{
+    color: #222 ;
+}
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    background-color: rgb(255, 255, 255);
+    opacity: 0.2;
+}
+
+/* for all buttons */
+/* .btn{
+    padding: 0.4rem 1.5rem 0.4rem 1.5rem !important;
+    font-size: 1.1rem !important;
+    border: none !important;
+} */
+.edit-btn{
+    padding: 0.4rem 1.5rem 0.4rem 1.5rem !important;
+    background-color: black !important;
+    border-color: black !important;
+    border: none;
+}
+
+.form-label-edit_new{
+    color: #6d030a;
+}
+
+.edit_form-image{
+    height: 10rem;
+    width: 10rem;
+}

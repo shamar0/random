@@ -1,0 +1,20 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <h2 class="mt-5" style="color: #6d030a; text-decoration: underline;" >TRENDING LISTINGS  <i class="fa-solid fa-fire"></i></h2>
+     
+    <div class="row card-row">
+        <%for(let listing of listings) {%>
+            <div class="card listing-card mb-3 ms-4  " style="width: 19rem;">
+            <a class="card-ind text-decoration-none" href="/listings/<%=listing._id%>">
+            <img src="<%=listing.image.url%>" class="card-img-top" alt="...">
+            <div class="card-img-overlay"></div>
+            <div class="card-body">
+              <h6 class="card-title"><%=listing.title%></h6>
+              <p style="font-weight: 450;"> &#x20B9; <%=listing.price.toLocaleString("en-IN")%>/night</p>
+            </div>
+        </a>
+          </div>
+          <%}%>
+        
+    </div>
+</body>

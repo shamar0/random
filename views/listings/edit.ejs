@@ -1,0 +1,55 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <div style="padding: 2rem;" class="row offset-1">
+        <form method="post" action="/listings/<%=listing._id%>?_method=PATCH" class="needs-validation" novalidate enctype="multipart/form-data" >
+            <div class="mb-3 col-10">
+                <label for="title" class="form-label form-label-edit_new"><b>Title</b></label>
+                <input name="listing[title]" value="<%=listing.title%>" type="text" class="form-control" id="title" >
+              </div>
+            <div class="mb-3 col-10">
+                <label for="description" class="form-label form-label-edit_new"><b>Description</b></label>
+                <input name="listing[description]" value="<%=listing.description%>" type="text" class="form-control" id="description" >
+              </div>
+              <div class="mb-3 col-5">
+                <label for="inputState" class="form-label form-label-edit_new"><b>Category</b></label>
+                <select name="listing[category]" id="inputState" class="form-select">
+                  <option selected>Choose Category</option>
+                  <option>Rooms</option>
+                  <option>Mountains</option>
+                  <option>Pools</option>
+                  <option>Arctic</option>
+                  <option>Farm</option>
+                  <option>Beach</option>
+                  <option>Lakes</option>
+                  <option>Hiking</option>
+                </select>
+              </div>
+            <div class="mb-3">
+                <label for="edit-img">Original Listing Image</label><br>
+                <img id="edit-img" class="edit_form-image" src="<%=listing.image.url%>" alt="">
+              </div>
+            <div class="mb-3 col-10">
+                <label for="description" class="form-label form-label-edit_new"><b>Upload Image</b></label>
+                <input name="listing[image]"  type="file" class="form-control" id="image"  >
+              </div>
+              <div class="row">
+
+                  <div class="mb-3 col-3">
+                      <label for="price" class="form-label form-label-edit_new"><b>Price</b></label>
+                      <input name="listing[price]" value="<%=listing.price%>" type="text" class="form-control" id="price" required >
+                    </div>
+                    <div class="mb-3 col-7">
+                        <label for="country" class="form-label form-label-edit_new"><b>Country</b></label>
+                        <input name="listing[country]" value="<%=listing.country%>" type="text" class="form-control" id="country" required >
+                      </div>
+              </div>
+            <div class="mb-3 col-10">
+                <label for="location" class="form-label form-label-edit_new"><b>Location</b></label>
+                <input name="listing[location]" value="<%=listing.location%>" type="text" class="form-control" id="location" required >
+              </div>
+            <button style="background-color: #fe424d;" class="btn btn-primary">Submit</button>
+        </form>
+        
+    </div>
+  
+</body>
